@@ -26,7 +26,7 @@ const config = {
         loader: "vue-loader",
         options: {
           loaders: {
-            scss: "vue-style-loader!css-loader!less-loader"
+            less: "vue-style-loader!css-loader!less-loader!postcss-loader"
           }
         }
       },
