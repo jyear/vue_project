@@ -1,0 +1,4 @@
+{
+    "development": "http://www.baidu.com",
+    "production": "http://www.baidu.com1"
+}

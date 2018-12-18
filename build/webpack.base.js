@@ -26,22 +26,28 @@ const config = {
             },
             {
                 test: /\.vue$/,
-                loader: "vue-loader",
-                options: {
-                    loaders: {
-                        less:
-                            "vue-style-loader!css-loader!less-loader!postcss-loader"
-                    }
-                }
+                loader: "vue-loader"
             },
             {
-                test: /\.tsx?$/,
-                loader: "ts-loader",
+                test: /\.(tsx?|js)$/,
+                include: RootPath,
+                use: [
+                    {
+                        loader: "babel-loader"
+                    },
+                    {
+                        loader: "ts-loader",
+                        options: { appendTsxSuffixTo: [/\.vue$/] }
+                    }
+                ]
+            },
+            {
+                test: /\.css|less$/,
                 exclude: /node_modules/,
-                options: {
-                    transpileOnly: true,
-                    appendTsSuffixTo: [/.vue$/]
-                }
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: ["css-loader", "postcss-loader", "less-loader"]
+                })
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

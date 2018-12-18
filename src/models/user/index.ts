@@ -5,13 +5,13 @@ export const state: State = {
     name: "张三"
 };
 export const getter = {
-    getName: ({ user }: any) => {
-        return user.name;
+    getName: (state: any) => {
+        return state.name;
     }
 };
 export const mutations = {
-    changeName: ({ user }: any) => {
-        user.name = user.name + 1;
+    changeName: (state: any) => {
+        state.name = state.name + 1;
     }
 };
 export const actions = {
@@ -19,3 +19,9 @@ export const actions = {
         context.commit("changeName");
     }
 };
+const userState = {
+    state,
+    mutations,
+    actions
+};
+export default userState;

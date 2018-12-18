@@ -1,17 +1,23 @@
 <style lang="less">
+.test {
+  transform: translateX(30px);
+}
 </style>
 <template>
-  <div>Index{{a}}</div>
+  <div class="test">
+    Index
+    <span>{{a}}</span>
+  </div>
 </template>
 <script lang='ts'>
 export default {
   data() {
-    return { a: 2 };
+    return { a: 1 };
   },
   mounted() {
-    console.log(this.$store.getters.getName);
+    console.log(this.$store.state.user.name);
     this.$store.dispatch("changeName");
-    console.log(this.$store.getters.getName);
+    console.log(this.$store.state.user.name);
   }
 };
 </script>
