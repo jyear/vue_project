@@ -6,17 +6,19 @@
 <template>
   <div class="test">
     Index
-    <span @click="clickSpan">{{a}}</span>
+    <span @click="clickSpan">{{a}}{{age}}</span>
   </div>
 </template>
 <script lang='ts'>
 interface Data {
   a: number;
+  age: number;
 }
 export default {
   data(): Data {
     return {
-      a: 1
+      a: 1,
+      age: this.$store.state.user.age
     };
   },
   methods: {
@@ -27,7 +29,8 @@ export default {
   mounted(): void {
     console.log(this.$store.state.user.name);
     this.$store.dispatch("changeName");
-    console.log(this.$store.state.user.name);
+    console.log(this.$store.state);
+    console.log(this.$store.getters.getName);
   }
 };
 </script>
