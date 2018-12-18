@@ -6,15 +6,20 @@
 <template>
   <div class="test">
     Index
-    <span>{{a}}</span>
+    <span @click="clickSpan">{{a}}</span>
   </div>
 </template>
 <script lang='ts'>
 export default {
-  data() {
+  data(): any {
     return { a: 1 };
   },
-  mounted() {
+  methods: {
+    clickSpan() {
+      alert(this.a);
+    }
+  },
+  mounted(): void {
     console.log(this.$store.state.user.name);
     this.$store.dispatch("changeName");
     console.log(this.$store.state.user.name);
