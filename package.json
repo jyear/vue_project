@@ -1,32 +1,38 @@
 {
-  "name": "vuets",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack "
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/vue": "^2.0.0",
-    "cross-env": "^5.2.0",
-    "css-loader": "^2.0.1",
-    "file-loader": "^2.0.0",
-    "html-webpack-plugin": "^3.2.0",
-    "less-loader": "^4.1.0",
-    "postcss-loader": "^3.0.0",
-    "ts-loader": "^5.3.1",
-    "typescript": "^3.2.2",
-    "url-loader": "^1.1.2",
-    "vue-class-component": "^6.3.2",
-    "vue-loader": "^15.4.2",
-    "vue-property-decorator": "^7.2.0",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-merge": "^4.1.5"
-  },
-  "dependencies": {
-    "vue": "^2.5.21"
-  }
+    "name": "vuets",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --watch "
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "cross-env": "^5.2.0",
+        "css-loader": "^2.0.1",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "file-loader": "^2.0.0",
+        "html-webpack-plugin": "^3.2.0",
+        "less-loader": "^4.1.0",
+        "postcss-loader": "^3.0.0",
+        "ts-loader": "^5.3.1",
+        "typescript": "^3.2.2",
+        "underscore-template-loader": "^1.0.0",
+        "url-loader": "^1.1.2",
+        "vue-class-component": "^6.3.2",
+        "vue-loader": "^15.4.2",
+        "vue-property-decorator": "^7.2.0",
+        "vue-style-loader": "^4.1.2",
+        "vue-template-compiler": "^2.5.21",
+        "webpack": "^4.27.1",
+        "webpack-cli": "^3.1.2",
+        "webpack-dev-server": "^3.1.10",
+        "webpack-merge": "^4.1.5"
+    },
+    "dependencies": {
+        "vue": "^2.5.21",
+        "vue-router": "^3.0.2",
+        "vuex": "^3.0.1"
+    }
 }
