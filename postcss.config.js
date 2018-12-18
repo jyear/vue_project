@@ -3,11 +3,12 @@ module.exports = {
         require("autoprefixer")({
             browsers: [
                 "defaults",
-                "not ie < 11",
-                "last 2 versions",
+                "not ie < 8",
+                "last 30 versions",
                 "> 1%",
                 "iOS 7",
-                "last 3 iOS versions"
+                "last 5 iOS versions",
+                "android >= 4.0"
             ]
         })
     ]
