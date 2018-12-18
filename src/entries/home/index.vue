@@ -10,12 +10,17 @@
   </div>
 </template>
 <script lang='ts'>
+interface Data {
+  a: number;
+}
 export default {
-  data(): any {
-    return { a: 1 };
+  data(): Data {
+    return {
+      a: 1
+    };
   },
   methods: {
-    clickSpan() {
+    clickSpan(): void {
       alert(this.a);
     }
   },
