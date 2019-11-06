@@ -1,0 +1,36 @@
+.demo-page {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+
+    &__left {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-flow: column;
+        align-items: stretch;
+
+        .left-top {
+            flex: 1;
+            min-height: 0;
+            overflow: auto;
+        }
+
+        .left-bottom {
+            height: 50px;
+        }
+    }
+
+    .right {
+        width: 800px;
+        border-left: 1px solid #ccc;
+    }
+
+    .vue-codemirror {
+        height: 100%;
+
+        .CodeMirror {
+            height: 100%;
+        }
+    }
+}
